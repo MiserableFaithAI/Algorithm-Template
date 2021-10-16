@@ -1,7 +1,7 @@
 int HEAP[100];
 int SIZE = 0;
 
-int put(int number) {
+int push(int number) {
     /**
      * @return location of the inserted
      */
