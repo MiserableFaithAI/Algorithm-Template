@@ -5,8 +5,8 @@ int push(int number) {
     /**
      * @return location of the inserted
      */
-    HEAP[SIZE] = number;
-    int now = SIZE - 1;
+    int now = SIZE + 1;
+    HEAP[SIZE ++] = number;
     while (now > 1) {
         int next = now / 2;
         if (HEAP[next - 1] > HEAP[now - 1]) {
@@ -18,7 +18,7 @@ int push(int number) {
             break;
         }
     }
-    return now;
+    return now - 1;
 }
 
 int pop() {
